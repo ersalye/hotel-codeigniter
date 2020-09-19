@@ -1,0 +1,292 @@
+<?php $this->view('web/header');
+$c_name =$this->session->userdata('customer_name');
+		 $c_email =$this->session->userdata('customer_email');
+		 $c_phone =$this->session->userdata('customer_phone');
+		 ?>
+	 
+         <div class="page-wrapper">
+		 <div class="inner-page-hero bg-image" data-image-src="<?php echo base_url(); ?>web-assets/images/profile-banner.jpg" style="background: url(images/profile-banner.jpg) center center / cover no-repeat;">
+                <div class="container m-b-10">
+				<div class="row">
+				<div class="col-md-8">
+				<h1 class="font-white" style="text-transform: capitalize;"><?php echo $c_name; ?></h1>
+                  <p class="font-white"><span class="c"><i class="fa fa-mobile" aria-hidden="true"></i> <?php echo  $c_phone; ?></span> , <span><i class="fa fa-envelope-o" aria-hidden="true"></i> <?php echo $c_email; ?></span></p>
+              
+				</div>
+				<div class="col-md-4">
+				<a class="btn theme-btn btn-sm pull-right">Edit Profile</a>
+				</div>
+				</div>
+                  <?php //print_r($address); ?>
+			   </div>
+                <!-- end:Container -->
+            </div	>
+            <section class="user-sec">
+               <div class="container m-t-30">
+                  <div class="row">
+                     <div class="col-xs-12 bhoechie-tab-container">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+                           <div class="list-group">
+                              <a href="#" class="list-group-item active text-center">
+                              <i class="fa fa-shopping-bag" aria-hidden="true"></i><br/>Orders
+                              </a>
+                              <a href="#" class="list-group-item text-center">
+                              <i class="fa fa-percent" aria-hidden="true"></i><br/>Offers
+                              </a>
+                              <a href="#" class="list-group-item text-center">
+                              <i class="fa fa-heart" aria-hidden="true"></i><br/>Favourites
+                              </a>
+                              <a href="#" class="list-group-item text-center">
+                              <i class="fa fa-credit-card-alt" aria-hidden="true"></i><br/>Payments
+                              </a>
+                              <a href="#" class="list-group-item text-center">
+                              <i class="fa fa-map-marker" aria-hidden="true"></i><br/>Addresses
+                              </a>
+                           </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+                           <!-- flight section -->
+                           <div class="bhoechie-tab-content active">
+                              <h5>PAST ORDERS</h5>
+                              <div class="bg-gray restaurant-entry user-orders m-t-15">
+                                 <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-7 text-xs-center text-sm-left">
+                                       <div class="entry-logo">
+                                          <a class="img-fluid" href="#"><img src="<?php echo base_url(); ?>web-assets/images/logo8.png" alt="Food logo"></a>
+                                       </div>
+                                       <!-- end:Logo -->
+                                       <div class="entry-dscr">
+                                          <h5><a href="#">Restaurant Name</a></h5>
+                                          <span>Jaihind Enclave Madhapur <a href="#">...</a></span>
+                                          <div>
+                                             <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-check"></i> ORDER #1182517503</li>
+                                                <li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> Fri, May 18, 12:42 PM</li>
+                                             </ul>
+                                          </div>
+                                          <a href="#" class="view-btn">VIEW DETAILS</a>
+                                       </div>
+                                       <!-- end:Entry description -->
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-5">
+                                       <div class="right-content bg-white">
+                                          <h5><a href="#">Delivered on Fri, May 18, 1:13 PM <i class="fa fa-check-circle" style="color:#60b246" aria-hidden="true"></i></a></h5>
+                                       </div>
+                                       <!-- end:right info -->
+                                    </div>
+                                    <div class="col-sm-12">
+                                       <div class="row new-sec">
+                                          <div class="col-sm-12 col-md-12 col-lg-8">
+                                             <div><span>Chicken Jumbo Pack x 1</span></div>
+                                             <div class="m-t-10">
+                                                <button onclick="location.href='checkout.html'" type="button" class="btn theme-btn btn-sm">REORDER</button>
+                                                <!-- <button onclick="location.href='checkout.html'" type="button" class="btn theme-btn btn-sm">Checkout</button> -->
+                                             </div>
+                                          </div>
+                                          <div class="col-sm-12 col-md-12 col-lg-4 text-right">
+                                             <span>Total Paid: $414</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--end:row -->
+                              </div>
+                              <div class="bg-gray restaurant-entry user-orders">
+                                 <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-7 text-xs-center text-sm-left">
+                                       <div class="entry-logo">
+                                          <a class="img-fluid" href="#"><img src="<?php echo base_url(); ?>web-assets/images/logo8.png" alt="Food logo"></a>
+                                       </div>
+                                       <!-- end:Logo -->
+                                       <div class="entry-dscr">
+                                          <h5><a href="#">Restaurant Name</a></h5>
+                                          <span>Jaihind Enclave Madhapur <a href="#">...</a></span>
+                                          <div>
+                                             <ul class="list-inline">
+                                                <li class="list-inline-item"><i class="fa fa-check"></i> ORDER #1182517503</li>
+                                                <li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> Fri, May 18, 12:42 PM</li>
+                                             </ul>
+                                          </div>
+                                          <a href="#" class="view-btn">VIEW DETAILS</a>
+                                       </div>
+                                       <!-- end:Entry description -->
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-5">
+                                       <div class="right-content bg-white">
+                                          <h5><a href="#">Delivered on Fri, May 18, 1:13 PM <i class="fa fa-check-circle" style="color:#60b246" aria-hidden="true"></i></a></h5>
+                                       </div>
+                                       <!-- end:right info -->
+                                    </div>
+                                    <div class="col-sm-12">
+                                       <div class="row new-sec">
+                                          <div class="col-sm-12 col-md-12 col-lg-8">
+                                             <div><span>Chicken Jumbo Pack x 1</span></div>
+                                             <div class="m-t-10">
+                                                <button onclick="location.href='checkout.html'" type="button" class="btn theme-btn btn-sm">REORDER</button>
+                                                <!-- <button onclick="location.href='checkout.html'" type="button" class="btn theme-btn btn-sm">Checkout</button> -->
+                                             </div>
+                                          </div>
+                                          <div class="col-sm-12 col-md-12 col-lg-4 text-right">
+                                             <span>Total Paid: $414</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!--end:row -->
+                              </div>
+                           </div>
+                           <!-- train section -->
+                           <div class="bhoechie-tab-content">
+                              <div class="row m-t-15">
+							  <?php foreach($promocodes as $promo){ ?>
+                                 <div class="col-sm-6">
+                                    <div class="offers">
+                                       <div class="coupon text-center">
+                                         <span>COUPON</span>
+                                       </div>
+                                       <div>
+                                          <div class="add-title m-t-10">Get Free Delivery</div>
+                                          <div class="add-sec m-t-10">Use code HOWZZAT & get free delivery on all orders above Rs. 99 from 7 pm to 11 pm</div>
+                                          <button type="button" class="btn theme-btn btn-sm m-t-10">Copy Code</button>
+                                       </div>
+                                    </div>
+                                 </div>
+							  <?php } ?>
+                                 
+                                 
+                              </div>
+                           </div>
+                           <!-- hotel search -->
+                           <div class="bhoechie-tab-content">
+                              <h5>Favourites</h5>
+                              <div class="row m-t-15">
+                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 food-item">
+                                    <div class="food-item-wrap">
+                                       <div class="figure-wrap bg-image" data-image-src="<?php echo base_url(); ?>web-assets/images/res2.jpg" style="background: url(&quot;images/res2.jpg&quot;) center center / cover no-repeat;">
+                                          <div class="rating pull-left"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
+                                       </div>
+                                       <div class="content">
+                                          <h5><a href="#">Punjabi Tadka</a></h5>
+                                          <div class="product-name">North Indian • Chinese</div>
+                                          <ul class="list-inline">
+                                             <li class="list-inline-item"><i class="fa fa-check"></i> Min $ 100</li>
+                                             <li class="list-inline-item"><i class="fa fa-motorcycle"></i> 30 min</li>
+                                          </ul>
+                                          <a href="profile.html" class="btn theme-btn-dash pull-right">Order Now</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 food-item">
+                                    <div class="food-item-wrap">
+                                       <div class="figure-wrap bg-image" data-image-src="<?php echo base_url(); ?>web-assets/images/res3.jpg" style="background: url(&quot;images/res3.jpg&quot;) center center / cover no-repeat;">
+                                          <div class="rating pull-left"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
+                                       </div>
+                                       <div class="content">
+                                          <h5><a href="#">Udipi's Upahar - Kondapur</a></h5>
+                                          <div class="product-name">South Indian • Breakfast and brunch • North Indian</div>
+                                          <ul class="list-inline">
+                                             <li class="list-inline-item"><i class="fa fa-check"></i> Min $ 100</li>
+                                             <li class="list-inline-item"><i class="fa fa-motorcycle"></i> 30 min</li>
+                                          </ul>
+                                          <a href="profile.html" class="btn theme-btn-dash pull-right">Order Now</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="bhoechie-tab-content">
+                              <center>
+                                 <h1 class="glyphicon glyphicon-cutlery" style="font-size:12em;color:#55518a"></h1>
+                                 <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                              </center>
+                           </div>
+                           <div class="bhoechie-tab-content">
+                              <h5>Manage Addresses</h5>
+                              <div class="row m-t-15">
+							  <?php foreach($address as $ad){ ?>
+                                 <div class="col-sm-6">
+                                    <div class="deliver">
+                                       <div class="home-icon">
+                                          <i class="fa fa-home" aria-hidden="true"></i>
+                                       </div>
+					   <div>
+						  <div class="add-title"><?php echo $ad['title']; ?></div>
+						  <div class="add-sec"><?php echo $ad['address']; ?></div>
+						  <button type="button" data-pid="<?php echo $ad['id'];?>" id="edit_<?php echo $ad['id'];?>"  class="btn edit-address theme-btn btn-sm" onclick="$('.aside').asidebar('open')">Edit</button>
+						  <button type="button" data-pid="<?php echo $ad['id'];?>" id="edit_<?php echo $ad['id'];?>" class="delete-address btn theme-btn btn-sm">Delete</button>
+					   </div>
+                                    </div>
+							  </div> <?php } ?>
+                                 
+                                
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="app-section">
+               <div class="app-wrap">
+                  <div class="container">
+                     <div class="row text-img-block text-xs-left">
+                        <div class="container">
+                           <div class="col-xs-12 col-sm-6  right-image text-center">
+                              <figure> <img src="<?php echo base_url(); ?>web-assets/images/app.png" alt="Right Image"> </figure>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 left-text">
+                              <h3>The Best Food Delivery App</h3>
+                              <p>Now you can make food happen pretty much wherever you are thanks to the free easy-to-use Food Delivery &amp; Takeout App.</p>
+                              <div class="social-btns">
+                                 <a href="#" class="app-btn apple-button clearfix">
+                                    <div class="pull-left"><i class="fa fa-apple"></i> </div>
+                                    <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">App Store</span> </div>
+                                 </a>
+                                 <a href="#" class="app-btn android-button clearfix">
+                                    <div class="pull-left"><i class="fa fa-android"></i> </div>
+                                    <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">Play store</span> </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- start: FOOTER -->
+            <?php $this->view('web/footer'); ?>
+            <!-- end:Footer -->
+         </div>
+         <!-- end:page wrapper -->
+      </div>
+      </div>
+      <!-- Bootstrap core JavaScript
+         ================================================== -->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.js"></script>
+      <script src="<?php echo base_url(); ?>web-assets/js/tether.min.js"></script>
+      <script src="<?php echo base_url(); ?>web-assets/js/bootstrap.min.js"></script>
+      <script src="<?php echo base_url(); ?>web-assets/js/animsition.min.js"></script>
+      <script src="<?php echo base_url(); ?>web-assets/js/bootstrap-slider.min.js"></script>
+      <script src="<?php echo base_url(); ?>web-assets/js/jquery.isotope.min.js"></script>
+      <script src="<?php echo base_url(); ?>web-assets/js/headroom.js"></script>
+      <script src="<?php echo base_url(); ?>web-assets/js/foodpicky.min.js"></script>
+     
+      <script type="text/javascript" src="<?php echo base_url(); ?>web-assets/js/asidebar.jquery.js"></script>
+      <script>
+         $(document).ready(function() {
+          $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+              e.preventDefault();
+              $(this).siblings('a.active').removeClass("active");
+              $(this).addClass("active");
+              var index = $(this).index();
+              $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+              $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+          });
+         });
+      </script>
+     
+     <?php $this->view('web/edit-address-web.php') ?>
+     <?php $this->view('web/location-web-js') ?>
+
+   </body>
+</html>

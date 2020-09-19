@@ -1,0 +1,1 @@
+http://localhost/storkks/api/example/shops/10

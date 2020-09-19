@@ -1,0 +1,122 @@
+<?php
+if (!defined('BASEPATH')) exit('No direct script access allowed');
+
+class User_rest extends CI_Model {
+
+    public function __construct() {
+        parent::__construct();
+		
+		//load database library
+        $this->load->database();
+    }
+
+	/*
+     * Fetch user data
+    */
+    function getRows($id = ""){
+        if(!empty($id)){
+            $query = $this->db->get_where('users', array('id' => $id));
+            return $query->row_array();
+        }else{
+            $query = $this->db->get('users');
+            return $query->result_array();
+        }
+    }
+    function getRows_userlogin($phone,$password){
+    
+            $query = $this->db->get_where('users', array('phone' => $phone,'password' => md5($password)));
+            return $query->row_array();
+     }
+    /*
+     * Fetch user data
+     */
+    function getShops($id = ""){
+        if(!empty($id)){
+            $query = $this->db->get_where('ts_restaurant', array('id' => $id));
+            return $query->row_array();
+        }else{
+		//	$query = $this->db->order_by("order_position");
+       		//$query = $this->db->where_not_in('id',$id);
+			$t_date = Date("H:i"); 
+			$where = "m_resturant_opens<$t_date AND m_resturant_close>$t_date OR e_resturant_opens <$t_date AND e_resturant_close >$t_date";
+			//$array = array('m_resturant_opens <=' => $t_date, 'm_resturant_close>=' => $t_date, 'everyday' => $status);
+
+			$query = $this->db->join('ts_restaurant_timeings', 'ts_restaurant_timeings.rid = ts_restaurant.id');
+			//$query = $this->db->where($where);
+			$query = $this->db->where('everyday','ALL');
+			$query = $this->db->get('ts_restaurant');
+            return $query->result_array();
+        }
+    }
+    function getShopsbcp($id = ""){
+        if(!empty($id)){
+            $query = $this->db->get_where('ts_restaurant', array('id' => $id));
+            return $query->row_array();
+        }else{
+			$query = $this->db->order_by("order_position");
+       		//$query = $this->db->where_not_in('id',$id);
+			$t_date = Date("H:i"); 
+			$query = $this->db->where('m_resturant_opens <=',$t_date);
+			$query = $this->db->where('m_resturant_close >=', $t_date);
+			$query = $this->db->or_where('e_resturant_opens <=',$t_date);
+			$query = $this->db->where('e_resturant_close >=',$t_date);
+			$query = $this->db->where('everyday','ALL');
+			$query = $this->db->get('ts_restaurant');
+            return $query->result_array();
+        }
+    }
+	function getCategorybyshop($id = ""){
+		if(!empty($id)){
+		 $query = $this->db->order_by("cat_order");
+		 $query = $this->db->get_where('ts_category', array('restaurant_id' => $id));
+		 return $query->result_array();
+        }else{
+		$query = $this->db->order_by("cat_order");
+		$query = $this->db->get_where('ts_category');
+		return $query->result_array();
+        }
+    }
+    
+    /*
+     * Insert user data
+     */
+    public function Users_insert($data = array()) {
+		if(!array_key_exists('created', $data)){
+			$data['created'] = date("Y-m-d H:i:s");
+		}
+		if(!array_key_exists('modified', $data)){
+			$data['modified'] = date("Y-m-d H:i:s");
+		}
+        $insert = $this->db->insert('users', $data);
+        if($insert){
+            return $this->db->insert_id();
+        }else{
+            return false;
+        }
+    }
+    
+    /*
+     * Update user data
+     */
+    public function update($data, $id) {
+        if(!empty($data) && !empty($id)){
+			if(!array_key_exists('modified', $data)){
+				$data['modified'] = date("Y-m-d H:i:s");
+			}
+            $update = $this->db->update('users', $data, array('id'=>$id));
+            return $update?true:false;
+        }else{
+            return false;
+        }
+    }
+    
+    /*
+     * Delete user data
+     */
+    public function delete($id){
+        $delete = $this->db->delete('users',array('id'=>$id));
+        return $delete?true:false;
+    }
+
+}
+?>

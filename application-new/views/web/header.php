@@ -1,0 +1,316 @@
+	<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="#">
+      <title>Storkks</title>
+      <!-- Bootstrap core CSS -->
+      <link href="<?php echo base_url(); ?>web-assets/css/bootstrap.min.css" rel="stylesheet">
+      <link href="<?php echo base_url(); ?>web-assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <!-- <link href="<?php echo base_url(); ?>web-assets/css/animsition.min.css" rel="stylesheet"> -->
+      <link href="<?php echo base_url(); ?>web-assets/css/animate.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="<?php echo base_url(); ?>web-assets/css/style.css" rel="stylesheet">
+      <link rel="stylesheet" href="<?php echo base_url(); ?>web-assets/css/dist.css">  
+	  
+	  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>web-assets/css/normalize.css" />
+      <?php $cntrl = $this->uri->segment(1);;
+				//$baser = base_url('Profile');
+		 if($cntrl != 'Profile'){
+			 ?>
+	 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>web-assets/css/demo.css" />
+	 
+		 <?php } ?>
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>web-assets/css/component.css" />
+      <!-- login -->
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>web-assets/css/util.css">
+      <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>web-assets/css/main.css">
+      <!-- End login -->
+   </head>
+   <body class="home">
+   
+   <!-- start cat -->
+<div class="categories-sec">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-6">
+                  <div>
+                     <h5>Recommended</h5>
+                  </div>
+                  <ul class="rec">
+                     <li><a href="#">American</a></li>
+                     <li><a href="#">Arabian</a></li>
+                     <li><a href="#">Asian</a></li>
+                     <li><a href="#">BBQ</a></li>
+                     <li><a href="#">Biryani</a></li>
+                     <li><a href="#">Breakfast and brunch</a></li>
+                     <li><a href="#">Cafe</a></li>
+                     <li><a href="#">Chinese</a></li>
+                     <li><a href="#">Coffee and tea</a></li>
+                     <li><a href="#">Desserts</a></li>
+                     <li><a href="#">European</a></li>
+                     <li><a href="#">Fast Food</a></li>
+                     <li><a href="#">American</a></li>
+                     <li><a href="#">Arabian</a></li>
+                     <li><a href="#">Asian</a></li>
+                     <li><a href="#">BBQ</a></li>
+                     <li><a href="#">Biryani</a></li>
+                     <li><a href="#">Breakfast and brunch</a></li>
+                     <li><a href="#">Cafe</a></li>
+                     <li><a href="#">Chinese</a></li>
+                     <li><a href="#">Coffee and tea</a></li>
+                     <li><a href="#">Desserts</a></li>
+                     <li><a href="#">European</a></li>
+                     <li><a href="#">Fast Food</a></li>
+                     <li><a href="#">American</a></li>
+                     <li><a href="#">Arabian</a></li>
+                     <li><a href="#">Asian</a></li>
+                     <li><a href="#">BBQ</a></li>
+                     <li><a href="#">Biryani</a></li>
+                     <li><a href="#">Breakfast and brunch</a></li>
+                     <li><a href="#">Cafe</a></li>
+                     <li><a href="#">Chinese</a></li>
+                     <li><a href="#">Coffee and tea</a></li>
+                     <li><a href="#">Desserts</a></li>
+                     <li><a href="#">European</a></li>
+                     <li><a href="#">Fast Food</a></li>
+                  </ul>
+               </div>
+               <div class="col-xs-6">
+                  <div>
+                     <h5>Most Popular</h5>
+                  </div>
+                  <ul class="rec">
+                     <li>
+                        <a class="dummy-media-object" href="#" style="background:url(<?php echo base_url(); ?>web-assets/images/res1.jpg);">
+                           <h3>Desserts</h3>
+                        </a>
+                     </li>
+                     <li>
+                        <a class="dummy-media-object" href="#" style="background:url(<?php echo base_url(); ?>web-assets/images/res2.jpg);">
+                           <h3>Desserts</h3>
+                        </a>
+                     </li>
+                     <li>
+                        <a class="dummy-media-object" href="#" style="background:url(<?php echo base_url(); ?>web-assets/images/res3.jpg);">
+                           <h3>Desserts</h3>
+                        </a>
+                     </li>
+                     <li>
+                        <a class="dummy-media-object" href="#" style="background:url(<?php echo base_url(); ?>web-assets/images/res4.jpg);">
+                           <h3>Desserts</h3>
+                        </a>
+                     </li>
+                     <li>
+                        <a class="dummy-media-object" href="#" style="background:url(<?php echo base_url(); ?>web-assets/images/res5.jpg);">
+                           <h3>Desserts</h3>
+                        </a>
+                     </li>
+                     <li>
+                        <a class="dummy-media-object" href="#" style="background:url(<?php echo base_url(); ?>web-assets/images/res1.jpg);">
+                           <h3>Desserts</h3>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   <!-- End cat -->
+    <?php $cururl = current_url();
+		 
+				$my_account = base_url('My-account');
+		 if($cururl != $my_account){
+			 ?>
+      <div class="aside">
+         <div class="aside-header">
+            <span class="close" data-dismiss="aside" aria-hidden="true">&times;</span>
+         </div>
+         <div class="aside-contents">
+            <div class="limiter loginf">
+               <div class="container-login100">
+                  <div class="wrap-login100">
+                     <form class="login100-form validate-form">
+                        <span class="login100-form-title p-b-30">
+                        Login
+                        <div class="txt2">(or)</div>
+                        <a href="#">
+                        <div class="create lfadeout">
+                        create an account
+                        </div>
+                        </a>
+                        </span>
+                        <div id="lemail" class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                           <input id="login-uname" class="input100" type="text" name="email">
+                           <span class="focus-input100"></span>
+                           <span class="label-input100">Email</span>
+						   <span id="valid-lmail" class="err-valid">Enter valid mail id</span>
+						   <span id="exist-lmail" class="err-valid">Mail id not registered</span>
+                        </div>
+                        <div id="lpassword" class="wrap-input100 validate-input" data-validate="Password is required">
+                           <input id="login-password" class="input100" type="password" maxlength="20" name="pass">
+                           <span class="focus-input100"></span>
+                           <span class="label-input100">Password</span>
+                        </div>
+                        <div class="flex-sb-m w-full p-t-3 p-b-32">
+                           <div class="contact100-form-checkbox">
+                              <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                              <label class="label-checkbox100" for="ckb1">
+                              Remember me
+                              </label>
+                           </div>
+                           <div>
+                              <a href="#" class="txt1">
+                              Forgot Password?
+                              </a>
+                           </div>
+                        </div>
+                        <div class="container-login100-form-btn">
+                           <button type="button" id="login-button" class="login100-form-btn">
+                           Login
+                           </button>
+                        </div>
+                     </form>
+                     <div class="login100-more" style="background-image: url('<?php echo base_url(); ?>web-assets/images/bg-01.jpg');">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="limiter sign-up loginr">
+               <div class="container-login100">
+                  <div class="wrap-login100">
+                     <form id="configform" class="login100-form validate-form">
+                        <span class="login100-form-title p-b-30">
+                        Sign up<br>
+                        <div class="txt2">(or)</div>
+                        <a href="#">
+                        <div class="create lcreate">
+                        login to your account
+                        </div>
+                        </a>
+                        </span>
+						<div id="ephone" class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                           <input id="cphone" class="input100" type="text" maxlength="10"  name="phone">
+                           <span class="focus-input100"></span>
+                           <span id="erphone" class="label-input100">Phone number <span class="create">*</span></span>
+						   <span id="valid-phone" class="err-valid">Enter valid phone</span>
+						   <span id="exist-phone" class="err-valid">Phone number already registered</span>
+                        </div>
+                        <div id="ename" class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                           <input id="cname" class="input100" type="text" name="name" maxlength="20">
+                           <span class="focus-input100"></span>
+                           <span class="label-input100">Name <span class="create">*</span></span>
+						   <span id="valid-name" class="err-valid">Enter minimum 4 char</span>
+                        </div>
+						<div id="eemail" class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                           <input id="cemail" class="input100" type="email" name="email">
+                           <span class="focus-input100"></span>
+                           <span class="label-input100">Email <span class="create">*</span></span>
+						   <span id="valid-mail" class="err-valid">Enter valid mail id</span>
+						   <span id="exist-mail" class="err-valid">Mail id already exist</span>
+                        </div>
+                        <div id="epassword" class="wrap-input100 validate-input" data-validate="Password is required">
+                           <input id="cpassword" class="input100" type="password" maxlength="20" name="password" required>
+                           <span class="focus-input100"></span>
+                           <span class="label-input100">Password <span class="create">*</span></span>
+						   <span id="valid-pass" class="err-valid">Enter minimum 6 char</span>
+                        </div>
+                        <div class="container-login100-form-btn m-t-30">
+                           <button type="button" id="rg-button" class="login100-form-btn">
+                           Submit
+                           </button>
+						   <span class="txt2 m-t-5">By creating an account, I accept the <a href="<?php echo base_url(); ?>terms-and-conditions" target="_blank">
+                        <span class="create">
+                         Terms & Conditions
+                        </span>
+                        </a></span>
+						   
+						    
+                        </div>
+                     </form>
+                     <div class="login100-more" style="background-image: url('<?php echo base_url(); ?>web-assets/images/bg-01.jpg');">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+<?php } ?>
+	  </script>
+      <!-- <div class="aside-backdrop"></div> -->
+      <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
+         <!--header starts-->
+		 <?php $cururl = current_url();
+		 
+				$base = base_url();
+		 if($cururl == $base){
+			 ?>
+         <header id="header" class="header-scroll top-header headrom">
+            <!-- .navbar -->
+            <nav class="navbar navbar-dark">
+               <div class="container">
+                  <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
+                  <a class="navbar-brand" href="<?php echo base_url(); ?>"> <img class="img-rounded" src="<?php echo base_url(); ?>web-assets/images/storkks_logo.png" alt=""> </a>
+                  <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
+                     <ul class="nav navbar-nav">
+                        <li class="nav-item"> <a class="nav-link active"> <span id="ipp"></span> <span class="sr-only">(current)</span></a> </li>
+                       
+						<?php $c_id =$this->session->userdata('customer_id'); if(empty($c_id)) {?>
+					   <li class="nav-item"> <a href="#" class="nav-link" href="<?php echo base_url(); ?>" onclick="$('.aside').asidebar('open')">Login / Sign up</a> </li>
+						<?php }else{ ?>
+						<li class="nav-item"> <a class="nav-link" href="<?php echo base_url('My-account'); ?>"><?php echo $c_name =$this->session->userdata('customer_name'); ?><span class="sr-only">(current)</span></a>  </li>
+						<?php 
+						} ?>
+					   <!-- <li class="nav-item"> <a class="nav-link" href="<?php echo base_url(); ?>"><i class="fa fa-search" aria-hidden="true"></i></a> </li> -->
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+            <!-- /.navbar -->
+         </header>
+		 <?php }else{?>
+		 <header id="header" class="header-scroll top-header headrom">
+            <!-- .navbar -->
+            <nav class="navbar navbar-dark nav-bg">
+               <div class="container">
+                  <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
+                  <a class="navbar-brand" href="<?php echo base_url(); ?>"> <img class="img-rounded" src="<?php echo base_url(); ?>web-assets/images/storkks_logo.png" alt=""> </a>
+                  <?php $cururl = current_url();
+				$baser = base_url('Restaurants');
+				if($cururl == $baser){
+				?>
+				  <a class="categories" href="#"><i class="fa fa-th" aria-hidden="true"></i>
+				<?php  current_url(); ?>Categories</a> <?php }?>
+                  <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
+                     <ul class="nav navbar-nav">
+                        
+						 <li class="nav-item"> <a class="nav-link active"> <span id="ipp"></span> <span class="sr-only">(current)</span></a> </li>
+						 <!--<li class="nav-item"> <a class="nav-link active" href="<?php echo base_url(); ?>">Home <span class="sr-only">(current)</span></a> </li>-->
+						
+                        <?php $c_id =$this->session->userdata('customer_id');
+						if(empty($c_id)) {?>
+					   <li class="nav-item"> <a href="#" class="nav-link" href="<?php echo base_url(); ?>" onclick="$('.aside').asidebar('open')">Login / Sign up</a> </li>
+						<?php }else{ ?>
+						<li class="nav-item"> <a class="nav-link" href="<?php echo base_url('My-account'); ?>"><?php echo $c_name =$this->session->userdata('customer_name'); ?></a>  </li>
+						<?php $cururl = current_url();
+						$cprofile = base_url('My-account');
+						if($cururl == $cprofile){
+						?>
+						<li class="nav-item"> <a class="nav-link active" href="<?php echo base_url('Products/logout'); ?>">Logout <span class="sr-only">(current)</span></a> </li>
+						
+						<?php 
+						} }?>
+                        <!-- <li class="nav-item"> <a class="nav-link" href="index.html"><i class="fa fa-search" aria-hidden="true"></i></a> </li> -->
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+            <!-- /.navbar -->
+         </header>
+		 <?php }?>
+		 

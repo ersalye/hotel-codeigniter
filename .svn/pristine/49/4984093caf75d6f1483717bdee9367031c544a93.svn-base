@@ -1,0 +1,102 @@
+<?php
+if (!defined('BASEPATH')) exit('No direct script access allowed');
+
+//include Rest Controller library
+require APPPATH . '/libraries/REST_Controller.php';
+
+class Example extends REST_Controller {
+
+    public function __construct() { 
+        parent::__construct();
+		
+		//load user model
+        $this->load->model('User_rest');
+    }
+		public function Shops_post($id = 0) {
+		$shops = $this->User_rest->getShops($id);
+		if(!empty($shops)){
+			$this->response($shops, REST_Controller::HTTP_OK);
+		}else{
+			$this->response([
+				'status' => FALSE,
+				'message' => 'No user were found.'
+			], REST_Controller::HTTP_NOT_FOUND);
+		}
+	}
+	public function user_get($id = 0) {
+		$users = $this->User_rest->getRows($id);
+		if(!empty($users)){
+			$this->response($users, REST_Controller::HTTP_OK);
+		}else{
+			$this->response([
+				'status' => FALSE,
+				'message' => 'No user were found.'
+			], REST_Controller::HTTP_NOT_FOUND);
+		}
+	}
+	
+	 function users_post() {
+		$userData = array();
+		$userData['first_name'] = $this->post('first_name');
+		$userData['email'] = $this->post('email');
+		$userData['phone'] = $this->post('phone');
+		$userData['password'] = md5($this->post('password'));
+
+		if(!empty($userData['first_name']) && !empty($userData['password']) && !empty($userData['email']) && !empty($userData['phone'])){
+			$insert = $this->User_rest->Users_insert($userData);
+			if($insert){
+				$this->response([
+					'status' => TRUE,
+					'message' => 'User has been added successfully.'
+				], REST_Controller::HTTP_OK);
+			}else{
+				$this->response("Some problems occurred, please try again.", REST_Controller::HTTP_BAD_REQUEST);
+			}
+        }else{
+		    $this->response($userData, REST_Controller::HTTP_BAD_REQUEST);
+		}
+	}
+	
+	public function user_put() {
+		$userData = array();
+		$id = $this->put('id');
+		$userData['first_name'] = $this->put('first_name');
+		$userData['last_name'] = $this->put('last_name');
+		$userData['email'] = $this->put('email');
+		$userData['phone'] = $this->put('phone');
+		if(!empty($id) && !empty($userData['first_name']) && !empty($userData['last_name']) && !empty($userData['email']) && !empty($userData['phone'])){
+			$update = $this->User_rest->update($userData, $id);
+			if($update){
+				$this->response([
+					'status' => TRUE,
+					'message' => 'User has been updated successfully.'
+				], REST_Controller::HTTP_OK);
+			}else{
+				$this->response("Some problems occurred, please try again.", REST_Controller::HTTP_BAD_REQUEST);
+			}
+        }else{
+		    $this->response("Provide complete user information to update.", REST_Controller::HTTP_BAD_REQUEST);
+		}
+	}
+	
+	public function user_delete($id){
+        if($id){
+            $delete = $this->User_rest->delete($id);
+            if($delete){
+        		$this->response([
+					'status' => TRUE,
+					'message' => 'User has been removed successfully.'
+				], REST_Controller::HTTP_OK);
+            }else{
+        		$this->response("Some problems occurred, please try again.", REST_Controller::HTTP_BAD_REQUEST);
+            }
+        }else{
+			$this->response([
+				'status' => FALSE,
+				'message' => 'No user were found.'
+			], REST_Controller::HTTP_NOT_FOUND);
+		}
+    }  
+}
+
+?>

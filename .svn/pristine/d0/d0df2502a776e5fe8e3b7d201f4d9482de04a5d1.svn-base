@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="#">
+      <title>Storkks</title>
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+      <link href="css/animsition.min.css" rel="stylesheet">
+      <link href="css/animate.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/jquery.nice-number.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="css/util.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+   </head>
+   <body class="home">
+      <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
+         <!--header starts-->
+         <header id="header" class="header-scroll top-header headrom">
+            <!-- .navbar -->
+            <nav class="navbar navbar-dark nav-bg">
+               <div class="container">
+                  <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
+                  <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="images/storkks_logo.png" alt=""> </a>
+                  <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
+                     <ul class="nav navbar-nav">
+                        <li class="nav-item"> <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="index.html">Login / Sign up</a> </li>
+                        <!-- <li class="nav-item"> <a class="nav-link" href="index.html"><i class="fa fa-search" aria-hidden="true"></i></a> </li> -->
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+            <!-- /.navbar -->
+         </header>
+         <div class="page-wrapper">
+            <div class="top-links">
+               <div class="container">
+                  <ul class="row links">
+                     <li class="col-xs-12 col-sm-3 link-item active"><span>1</span><a href="index.html">Choose Your Location</a></li>
+                     <li class="col-xs-12 col-sm-3 link-item active"><span>2</span><a href="restaurants.html">Choose Restaurant</a></li>
+                     <li class="col-xs-12 col-sm-3 link-item active"><span>3</span><a href="profile.html">Pick Your favorite food</a></li>
+                     <li class="col-xs-12 col-sm-3 link-item active"><span>4</span><a href="checkout.html">Order and Pay online</a></li>
+                  </ul>
+               </div>
+            </div>
+            <section class="cart-sec">
+               <div class="container m-t-30">
+                  <div class="row">
+                     <div class="col-sm-8 margin-b-30">
+                        <form id="msform">
+                           <!-- progressbar -->
+                           <ul id="progressbar" style="display:none;">
+                              <li class="active">Account</li>
+                              <li>Delivery address</li>
+                              <li>Payment</li>
+                           </ul>
+                           <!-- fieldsets -->
+                           <fieldset>
+                              <h2 class="fs-title text-center">Account</h2>
+                              <h3 class="fs-subtitle text-center">To place your order now, log in to your existing account or sign up.</h3>
+                              <div class="limiter loginf">
+                                 <div class="container-login100">
+                                    <div class="wrap-login100">
+                                       <div class="login100-form validate-form">
+                                          <span class="login100-form-title p-b-30">
+                                          Login
+                                          <span class="txt2">(or)</span>
+                                          <span class="create lfadeout">
+                                          create an account
+                                          </span>
+                                          </span>
+                                          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                             <input class="input100" type="text" name="email">
+                                             <span class="focus-input100"></span>
+                                             <span class="label-input100">Email</span>
+                                          </div>
+                                          <div class="wrap-input100 validate-input" data-validate="Password is required">
+                                             <input class="input100" type="password" name="pass">
+                                             <span class="focus-input100"></span>
+                                             <span class="label-input100">Password</span>
+                                          </div>
+                                          <div class="flex-sb-m w-full p-t-3 p-b-32">
+                                             <div class="contact100-form-checkbox">
+                                                <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                                                <label class="label-checkbox100" for="ckb1">
+                                                Remember me
+                                                </label>
+                                             </div>
+                                             <div>
+                                                <a href="#" class="txt1">
+                                                Forgot Password?
+                                                </a>
+                                             </div>
+                                          </div>
+                                          <div class="container-login100-form-btn">
+                                             <button class="login100-form-btn">
+                                             Login
+                                             </button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="limiter sign-up loginr" style="display:none;">
+                                 <div class="container-login100">
+                                    <div class="wrap-login100">
+                                       <div class="login100-form validate-form">
+                                          <span class="login100-form-title p-b-30">
+                                          Sign up
+                                          <span class="txt2">(or)</span>
+                                          <span class="create lcreate">
+                                          login to your account
+                                          </span>
+                                          </span>
+                                          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                             <input class="input100" type="text" name="email">
+                                             <span class="focus-input100"></span>
+                                             <span class="label-input100">Phone number</span>
+                                          </div>
+                                          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                             <input class="input100" type="text" name="email">
+                                             <span class="focus-input100"></span>
+                                             <span class="label-input100">Name</span>
+                                          </div>
+                                          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                             <input class="input100" type="text" name="email">
+                                             <span class="focus-input100"></span>
+                                             <span class="label-input100">Email</span>
+                                          </div>
+                                          <div class="wrap-input100 validate-input" data-validate="Password is required">
+                                             <input class="input100" type="password" name="pass">
+                                             <span class="focus-input100"></span>
+                                             <span class="label-input100">Password</span>
+                                          </div>
+                                          <div class="container-login100-form-btn m-t-30">
+                                             <button class="login100-form-btn">
+                                             Submit
+                                             </button>
+                                             <span class="txt2 m-t-5">By creating an account, I accept the <a href="#">
+                                             <span class="create">
+                                             Terms & Conditions
+                                             </span>
+                                             </a></span>
+                                          </div>
+                                       </div>
+                                       <div class="login100-more" style="background-image: url('images/bg-01.jpg');">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <input type="button" name="next" class="next action-button" value="Next" />
+                           </fieldset>
+                           <fieldset>
+                              <h2 class="fs-title text-center">Select delivery address</h2>
+                              <h3 class="fs-subtitle text-center">You have a saved address in this location</h3>
+                              <div class="row">
+                                 <div class="col-sm-6">
+                                    <div class="deliver">
+                                       <div class="home-icon">
+                                          <i class="fa fa-home" aria-hidden="true"></i>
+                                       </div>
+                                       <div>
+                                          <div class="add-title">Home</div>
+                                          <div class="add-sec">plot no91, lig 203/4, K P H B Phase 1, Kukatpally, Hyderabad, Telangana 500072, India</div>
+                                          <div class="del-time">33 MINS</div>
+                                          <div class="deliver-btn">Deliver Here</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-6">
+                                    <div class="deliver">
+                                       <div class="home-icon">
+                                          <i class="fa fa-home" aria-hidden="true"></i>
+                                       </div>
+                                       <div>
+                                          <div class="add-title">Home</div>
+                                          <div class="add-sec">plot no91, lig 203/4, K P H B Phase 1, Kukatpally, Hyderabad, Telangana 500072, India</div>
+                                          <div class="del-time">33 MINS</div>
+                                          <div class="deliver-btn">Deliver Here</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-6">
+                                    <div class="deliver">
+                                       <div class="home-icon">
+                                          <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                       </div>
+                                       <div>
+                                          <div class="add-title">Add New Address</div>
+                                          <div class="add-sec">Kukatpally Housing Board Colony, Kukatpally, Hyderabad, Telangana, India</div>
+                                          <br>
+                                          <div class="deliver-btn" data-toggle="modal" data-target="#myModal">ADD NEW</div>
+                                       </div>
+                                    </div>
+									<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">Save delivery address</h4>
+        </div>
+        <div class="modal-body">
+          <div class="limiter loginf">
+                                 <div class="container-login100">
+                                    <div class="wrap-login100">
+                                       <div class="login100-form validate-form bg-white">
+                                         
+                                          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                             <input class="input100" type="text" name="email">
+                                             <span class="focus-input100"></span>
+                                             <span class="label-input100">Address</span>
+                                          </div>
+                                          <div class="wrap-input100 validate-input" data-validate="Password is required">
+                                             <input class="input100" type="text" name="pass">
+                                             <span class="focus-input100"></span>
+                                             <span class="label-input100">Landmark</span>
+                                          </div>
+										  <div class="wrap-input100 validate-input" data-validate="Password is required">
+                                             <input class="input100" type="text" name="pass">
+                                             <span class="focus-input100"></span>
+                                             <span class="label-input100">Pincode</span>
+                                          </div>
+                                          
+                                          <div class="container-login100-form-btn">
+                                             <button class="login100-form-btn">
+                                             SAVE ADDRESS & PROCEED
+                                             </button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+									
+                                 </div>
+                              </div>
+                              <input type="button" name="previous" class="previous action-button" value="Previous" />
+                              <input type="button" name="next" class="next action-button" value="Next" />
+                           </fieldset>
+                           <fieldset>
+                              <h2 class="fs-title text-center">Choose payment method</h2>
+                              <!-- <h3 class="fs-subtitle">We will never sell it</h3> -->
+                              <input type="button" name="previous" class="previous action-button" value="Previous" />
+                              <input type="submit" name="submit" class="submit action-button" value="Submit" />
+                           </fieldset>
+                        </form>
+                     </div>
+                     <div class="col-sm-4">
+                        <div class="cart-totals margin-b-20">
+                           <div class="widget widget-cart">
+                              <div class="widget-heading">
+                                 <h3 class="widget-title text-dark">
+                                    Your Shopping Cart
+                                 </h3>
+                                 <div class="clearfix"></div>
+                              </div>
+                              <div class="cart-item" id="style-7">
+                                 <div class="order-row bg-white">
+                                    <div class="widget-body">
+                                       <!-- <div class="title-row">Pizza Quatro Stagione <a href="#"><i class="fa fa-trash pull-right"></i></a></div> -->
+                                       <div class="row no-gutter">
+                                          <div class="col-xs-6">
+                                             item one
+                                          </div>
+                                          <div class="col-xs-4">
+                                             <input type="number" value="2" id="example-number-input"> 
+                                          </div>
+                                          <div class="col-xs-2 text-right">
+                                             <span>$99</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="order-row">
+                                    <div class="widget-body">
+                                       <!-- <div class="title-row">Pizza Quatro Stagione <a href="#"><i class="fa fa-trash pull-right"></i></a></div> -->
+                                       <div class="row no-gutter">
+                                          <div class="col-xs-6">
+                                             item two
+                                          </div>
+                                          <div class="col-xs-4">
+                                             <input type="number" value="2" id="example-number-input"> 
+                                          </div>
+                                          <div class="col-xs-2 text-right">
+                                             <span>$99</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="order-row bg-white">
+                                    <div class="widget-body">
+                                       <!-- <div class="title-row">Pizza Quatro Stagione <a href="#"><i class="fa fa-trash pull-right"></i></a></div> -->
+                                       <div class="row no-gutter">
+                                          <div class="col-xs-6">
+                                             item one
+                                          </div>
+                                          <div class="col-xs-4">
+                                             <input type="number" value="2" id="example-number-input"> 
+                                          </div>
+                                          <div class="col-xs-2 text-right">
+                                             <span>$99</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- end:Order row -->
+                              <div class="widget-body">
+                                 <div class="price-wrap row">
+                                    <div class="col-xs-8">
+                                       <p>GST</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                       <h3 class="value text-right">$ 10,00</h3>
+                                    </div>
+                                 </div>
+								 <div class="price-wrap row">
+                                    <div class="col-xs-8">
+                                       <p>Delivery Charges</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                       <h3 class="value text-right">$ 08,00</h3>
+                                    </div>
+                                 </div>
+								 <div class="price-wrap row">
+                                    <div class="col-xs-8">
+                                       <p><strong>TOTAL</strong></p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                       <h3 class="value text-right"><strong>$ 25,49</strong></h3>
+                                    </div>
+                                 </div>
+                                 <br>
+                                 <div class="row">
+                                    <div class="col-xs-12">
+                                       <button onclick="location.href='checkout.html'" type="button" class="btn btn-block theme-btn btn-lg">Checkout</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="app-section">
+               <div class="app-wrap">
+                  <div class="container">
+                     <div class="row text-img-block text-xs-left">
+                        <div class="container">
+                           <div class="col-xs-12 col-sm-6  right-image text-center">
+                              <figure> <img src="images/app.png" alt="Right Image"> </figure>
+                           </div>
+                           <div class="col-xs-12 col-sm-6 left-text">
+                              <h3>The Best Food Delivery App</h3>
+                              <p>Now you can make food happen pretty much wherever you are thanks to the free easy-to-use Food Delivery &amp; Takeout App.</p>
+                              <div class="social-btns">
+                                 <a href="#" class="app-btn apple-button clearfix">
+                                    <div class="pull-left"><i class="fa fa-apple"></i> </div>
+                                    <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">App Store</span> </div>
+                                 </a>
+                                 <a href="#" class="app-btn android-button clearfix">
+                                    <div class="pull-left"><i class="fa fa-android"></i> </div>
+                                    <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">Play store</span> </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- start: FOOTER -->
+            <footer class="footer">
+            <div class="container">
+               <!-- top footer statrs -->
+               <div class="row top-footer">
+                  <div class="col-xs-12 col-sm-3 footer-logo-block color-gray">
+                     <a href="#"> <img src="images/storkks_logo.png" alt="Footer logo"> </a> <span>You Order &amp; We Deliver </span> 
+                     <div class="payment-options color-gray">
+                        <ul>
+                           <li>
+                              <a href="#"> <i class="fa fa-facebook-square" aria-hidden="true"></i> </a>
+                           </li>
+                           <li>
+                              <a href="#"> <i class="fa fa-pinterest-square" aria-hidden="true"></i> </a>
+                           </li>
+                           <li>
+                              <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i> </a>
+                           </li>
+                           <li>
+                              <a href="#"> <i class="fa fa-twitter-square" aria-hidden="true"></i> </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-2 about color-gray">
+                     <h5>Company</h5>
+                     <ul>
+                        <li><a href="about.html">About us</a> </li>
+                        <li><a href="careers.html">Careers</a> </li>
+                        <li><a href="blog.html">Blog</a> </li>
+                     </ul>
+                  </div>
+                  <div class="col-xs-12 col-sm-2 how-it-works-links color-gray">
+                     <h5>Contact</h5>
+                     <ul>
+                        <li><a href="support.html">Help & Support</a> </li>
+                        <li><a href="#">Partner with us</a> </li>
+                     </ul>
+                  </div>
+                  <div class="col-xs-12 col-sm-2 pages color-gray">
+                     <h5>Legal</h5>
+                     <ul>
+                        <li><a href="terms_and_conditions.html">Terms & Conditions</a> </li>
+                        <li><a href="refund-policy.html">Refund & Cancellation</a> </li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a> </li>
+                        <li><a href="offers_terms.html">Offer Terms</a> </li>
+                     </ul>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 pages color-gray">
+                     <ul class="social-btns">
+                        <li>
+                           <a href="#" class="app-btn apple-button clearfix">
+                              <div class="pull-left"><i class="fa fa-apple"></i> </div>
+                              <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">App Store</span> </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="app-btn android-button clearfix">
+                              <div class="pull-left"><i class="fa fa-play" aria-hidden="true"></i> </div>
+                              <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">Google Play</span> </div>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- top footer ends -->
+            </div>
+         </footer>
+            <!-- end:Footer -->
+         </div>
+         <!-- end:page wrapper -->
+      </div>
+      </div>
+      <!-- Bootstrap core JavaScript
+         ================================================== -->
+      <script src="js/jquery.min.js"></script> 
+      <script src="js/tether.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/animsition.min.js"></script>
+      <script src="js/bootstrap-slider.min.js"></script>
+      <script src="js/jquery.isotope.min.js"></script>
+      <script src="js/headroom.js"></script>
+      <script src="js/foodpicky.min.js"></script>
+      <script src="js/jquery.nice-number.js"></script>
+      <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+      <!-- jQuery easing plugin --> 
+      <script src="js/jquery.easing.min.js" type="text/javascript"></script> 
+      <script>
+         $(document).ready(function(){
+         
+         $(".lfadeout").click(function(){
+            $(".loginr").show();
+             $(".loginf").hide();
+             });
+         $(".lcreate").click(function(){
+            
+             $(".loginf").show();
+         	$(".loginr").hide();
+             });
+         });
+      </script>
+      <script>
+         $(function() {
+         
+         //jQuery time
+         var current_fs, next_fs, previous_fs; //fieldsets
+         var left, opacity, scale; //fieldset properties which we will animate
+         var animating; //flag to prevent quick multi-click glitches
+         
+         $(".next").click(function(){
+         	if(animating) return false;
+         	animating = true;
+         	
+         	current_fs = $(this).parent();
+         	next_fs = $(this).parent().next();
+         	
+         	//activate next step on progressbar using the index of next_fs
+         	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+         	
+         	//show the next fieldset
+         	next_fs.show(); 
+         	//hide the current fieldset with style
+         	current_fs.animate({opacity: 0}, {
+         		step: function(now, mx) {
+         			//as the opacity of current_fs reduces to 0 - stored in "now"
+         			//1. scale current_fs down to 80%
+         			scale = 1 - (1 - now) * 0.2;
+         			//2. bring next_fs from the right(50%)
+         			left = (now * 50)+"%";
+         			//3. increase opacity of next_fs to 1 as it moves in
+         			opacity = 1 - now;
+         			current_fs.css({'transform': 'scale('+scale+')'});
+         			next_fs.css({'left': left, 'opacity': opacity});
+         		}, 
+         		duration: 800, 
+         		complete: function(){
+         			current_fs.hide();
+         			animating = false;
+         		}, 
+         		//this comes from the custom easing plugin
+         		easing: 'easeInOutBack'
+         	});
+         });
+         
+         $(".previous").click(function(){
+         	if(animating) return false;
+         	animating = true;
+         	
+         	current_fs = $(this).parent();
+         	previous_fs = $(this).parent().prev();
+         	
+         	//de-activate current step on progressbar
+         	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+         	
+         	//show the previous fieldset
+         	previous_fs.show(); 
+         	//hide the current fieldset with style
+         	current_fs.animate({opacity: 0}, {
+         		step: function(now, mx) {
+         			//as the opacity of current_fs reduces to 0 - stored in "now"
+         			//1. scale previous_fs from 80% to 100%
+         			scale = 0.8 + (1 - now) * 0.2;
+         			//2. take current_fs to the right(50%) - from 0%
+         			left = ((1-now) * 50)+"%";
+         			//3. increase opacity of previous_fs to 1 as it moves in
+         			opacity = 1 - now;
+         			current_fs.css({'left': left});
+         			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+         		}, 
+         		duration: 800, 
+         		complete: function(){
+         			current_fs.hide();
+         			animating = false;
+         		}, 
+         		//this comes from the custom easing plugin
+         		easing: 'easeInOutBack'
+         	});
+         });
+         
+         $(".submit").click(function(){
+         	return false;
+         })
+         
+         });
+      </script>
+      <script>
+         $('input[type="number"]').niceNumber();
+      </script>
+   </body>
+</html>

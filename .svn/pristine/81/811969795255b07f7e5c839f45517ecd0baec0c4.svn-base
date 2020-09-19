@@ -1,0 +1,157 @@
+  <?php  $this->load->view('shop/shop-header');	?>	
+  <div class="app-content content container-fluid">
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                                 
+<!-- File export table -->
+    <div class="row file">
+        <div class="col-xs-12">
+            <div class="card">
+                <div class="card-header">
+                                    <h4 class="card-title">Products</h4>
+									<div class="table-btn btn btn-icon btn-success">	<?php echo $this->session->flashdata('catdelete'); ?>							</div>
+                    <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                            <li><a href="<?php echo base_url(); ?>/Shop/AddProducts" class="btn btn-primary add-btn btn-darken-3">Add Product</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body collapse in">
+                    <div class="card-block card-dashboard table-responsive">
+                        <table class="table table-striped table-bordered file-export">
+                            <thead>
+                                <tr>
+                                    <th>S.no</th>
+                                    <th>Name</th>
+                                    <th>Category Name</th>
+                                    <th>Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <?php $i= 1; foreach($products as $p){ ?>
+									<tr>
+										<td><?php echo $i; ?></td>
+										<td><?php echo $p['product_name']; ?></td>
+                                        <td><?php $idd = $p['category']; 
+										$CI =& get_instance();
+										$CI->Categoryname($idd) ; ?></td>
+                                        <td><?php echo $p['price']; ?></td>
+                                    
+                                    <td><a href="EditProduct/<?php echo $p['id']; ?>" class="table-btn btn btn-icon btn-success"><i class="fa fa-pencil-square-o"></i></a>
+                                <a href="Productdelete/<?php echo $p['id']; ?>" class="table-btn btn btn-icon btn-danger">Remove</a></td>
+                                </tr>
+                                    <?php $i++; } ?>
+									</tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- File export table -->
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer footer-static footer-light navbar-border">
+         <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+            <span class="float-md-left d-xs-block d-md-inline-block">
+                © 2018 Storkks 
+            </span>
+        </p>
+            
+    </footer>
+    <script>
+    var resizefunc = [];
+    </script>
+
+    <!-- BEGIN VENDOR JS-->
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/vendors.min.js" type="text/javascript"></script>
+    <!-- BEGIN VENDOR JS-->
+        <!-- BEGIN PAGE VENDOR JS-->
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/raphael-min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/morris.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/unslider-min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/horizontal-timeline.js" type="text/javascript"></script>
+    <!-- END PAGE VENDOR JS-->
+        <!-- BEGIN STACK JS-->
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/app-menu.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/app.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/customizer.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/dataTables.buttons.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/buttons.flash.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/jszip.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/pdfmake.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/vfs_fonts.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/buttons.html5.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/buttons.print.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/jquery.raty.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/datatable-advanced.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/rating.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/star.rating.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/froala_editor.pkgd.min.js" type="text/javascript"></script>
+    <!-- END STACK JS-->
+
+        
+     <!-- BEGIN PAGE LEVEL JS-->
+   
+    <script type="text/javascript">
+        //var data = "[{&quot;month&quot;:&quot;2018-01&quot;,&quot;delivered&quot;:&quot;0&quot;,&quot;cancelled&quot;:&quot;0&quot;},{&quot;month&quot;:&quot;2018-02&quot;,&quot;delivered&quot;:&quot;0&quot;,&quot;cancelled&quot;:&quot;0&quot;},{&quot;month&quot;:&quot;2018-03&quot;,&quot;delivered&quot;:&quot;21&quot;,&quot;cancelled&quot;:&quot;11&quot;},{&quot;month&quot;:&quot;2018-04&quot;,&quot;delivered&quot;:&quot;0&quot;,&quot;cancelled&quot;:&quot;0&quot;},{&quot;month&quot;:&quot;2018-05&quot;,&quot;delivered&quot;:&quot;0&quot;,&quot;cancelled&quot;:&quot;0&quot;},{&quot;month&quot;:&quot;2018-06&quot;,&quot;delivered&quot;:&quot;0&quot;,&quot;cancelled&quot;:&quot;0&quot;},{&quot;month&quot;:&quot;2018-07&quot;,&quot;delivered&quot;:&quot;0&quot;,&quot;cancelled&quot;:&quot;0&quot;},{&quot;month&quot;:&quot;2018-08&quot;,&quot;delivered&quot;:&quot;0&quot;,&quot;cancelled&quot;:&quot;0&quot;},{&quot;month&quot;:&quot;2018-09&quot;,&quot;delivered&quot;:&quot;0&quot;,&quot;cancelled&quot;:&quot;0&quot;},{&quot;month&quot;:&quot;2018-10&quot;,&quot;delivered&quot;:&quot;0&quot;,&quot;cancelled&quot;:&quot;0&quot;},{&quot;month&quot;:&quot;2018-11&quot;,&quot;delivered&quot;:&quot;0&quot;,&quot;cancelled&quot;:&quot;0&quot;},{&quot;month&quot;:&quot;2018-12&quot;,&quot;delivered&quot;:&quot;0&quot;,&quot;cancelled&quot;:&quot;0&quot;}]";
+        var data = [ 
+                        {
+                month: "2018-01",  delivered: 0, cancelled: 0
+            },
+                        {
+                month: "2018-02",  delivered: 0, cancelled: 0
+            },
+                        {
+                month: "2018-03",  delivered: 21, cancelled: 11
+            },
+                        {
+                month: "2018-04",  delivered: 0, cancelled: 0
+            },
+                        {
+                month: "2018-05",  delivered: 0, cancelled: 0
+            },
+                        {
+                month: "2018-06",  delivered: 0, cancelled: 0
+            },
+                        {
+                month: "2018-07",  delivered: 0, cancelled: 0
+            },
+                        {
+                month: "2018-08",  delivered: 0, cancelled: 0
+            },
+                        {
+                month: "2018-09",  delivered: 0, cancelled: 0
+            },
+                        {
+                month: "2018-10",  delivered: 0, cancelled: 0
+            },
+                        {
+                month: "2018-11",  delivered: 0, cancelled: 0
+            },
+                        {
+                month: "2018-12",  delivered: 0, cancelled: 0
+            },
+                    ];
+    </script>
+     <script src="<?php echo base_url(); ?>restaurant-assets/js/dashboard-ecommerce.min.js" type="text/javascript"></script>
+
+    <script src="<?php echo base_url(); ?>restaurant-assets/js/scripts.js" type="text/javascript"></script>
+
+</body>
+</html>
